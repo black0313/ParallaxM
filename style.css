@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,
+ol,li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+h1,h2,h3,h4,h4,h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,body{
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    background: #0b1d26;
+    color: #fff;
+    /*font-family: NSimSun;*/
+}
+.wrapper{
+    min-height: 100%;
+}
+
+._container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+.parallax{
+    min-height: 100vh;
+}
+.parallax__body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax__container{
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+.parallax__label{
+    color: #fbd784;
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin: 0 0 30px 0;
+    align-items: center;
+}
+.parallax__label::before{
+    flex: 0 0 70px;
+    content: "";
+    margin: 0 30px 0 0;
+    background-color: #fbd784;
+    height: 1px;
+}
+.parallax__title{
+    font-size: 88px;
+}
+.parallax__images{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10%;
+    /*left: 10%;*/
+    z-index: 1;
+}
+.images-parallax{
+
+}
+.images-parallax__item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*z-index: 1;*/
+}
+.images-parallax__clouds, .images-parallax__mountains, .images-parallax__human{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+.images-parallax__clouds{
+    background: url("./img/clouds.jpg") top / cover no-repeat;
+    top: 0;
+}
+.images-parallax__mountains{
+    background: url("./img/mountains.png") top / cover no-repeat;
+    top: 15%;
+    z-index: 1;
+}
+.images-parallax__human{
+    background: url("./img/human.png") top / cover no-repeat;
+    top: 45%;
+    z-index: 3;
+}
+@media (max-aspect-ratio: 3/2) {
+    .images-parallax__human{
+        background-position: 20% top;
+    }
+}
+.content{
+    background-color: #0b1d26;
+    position: relative;
+    z-index: 2;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    transform: translate(0,-100%);
+    pointer-events: none;
+    /*background: linear-gradient(180deg, rgba(11,29,38,30));*/
+}
+.content__title{
+    font-size: 35px;
+    margin: 0 0 30px 0;
+}
+.content__text{
+    font-size: 16px;
+    line-height: 150%;
+}
+.content__text p{
+    margin: 0 0 30px 0;
+}
